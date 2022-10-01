@@ -21,7 +21,7 @@ public class SleepController {
 
     @RequestMapping("/{millis}")
     public Mono<String> get(@PathVariable Integer millis) {
-        log.info("sleep: {}", millis);
+        log.info("/sleep: {}", millis);
         final StopWatch sw = new StopWatch();
         log.info("Thread # {}: start {}", Thread.currentThread().getId(), DF.format(Date.from(Instant.now())));
         sw.start();
